@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const CalcUtil = [
-  {name:"+", func: (result,target)=>(result+target)},
+  {name:"+", func: (result,target)=>(result+target)},   
   {name:"-", func: (result,target)=>(result-target)},
   {name:"*", func: (result,target)=>(result*target)},
   {name:"/", func: (result,target)=>(result/target)},
