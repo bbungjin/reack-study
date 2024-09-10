@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Log from "./components/Log";
 
 const Test = () => {
   const [state, setState] = useState({log:[]});
