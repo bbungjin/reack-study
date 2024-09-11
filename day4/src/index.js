@@ -3,13 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import FormAction from './form/FormAction';
-import MuiExample from './form/MuiExample';
-import CustomForm from './form/teach/CustomForm';
+import { createBrowserRouter, RouterProvider} from 'react-router-dom';
+import Person from './components/person';
+import Calc from './components/calc';
+
+const router = createBrowserRouter(
+  [
+    {
+      path:'/', // 기본페이지
+      element: <Person />
+    },
+    {
+      path:'/test', // localhost:3000/test
+      element: <Calc />
+    }
+  ]
+)
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CustomForm />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 

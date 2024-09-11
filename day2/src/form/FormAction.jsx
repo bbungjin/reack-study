@@ -26,10 +26,7 @@ const FormAction= ()=>{
         <input type="text"></input>
         <button onClick={searchUser}>검색</button>
       </div>
-      {show.map((val, index) => (
-          <div key={index}>
-            {val.name}, {val.age}
-          </div>
+      {show.map((val, index) => (<div key={index}>{val.name}, {val.age}</div>
         ))}
     </div>)
 
